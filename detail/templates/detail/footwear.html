@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'enroll/css/contentstyle.css' %} ">
+    <title>Foot-Wear</title>
+      <!--Script for icon -->
+      <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="{% static 'enroll/img/fevi.PNG' %}" type="image/x-icon" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <!-- <a href="index.html" class="brand">MY BUSINESS</a> -->
+        <nav class="nav">
+          <button class="nav__toggle" aria-expanded="false" type="button">
+            <i class="material-icons" style="font-size: 40px; color: #e7434e"
+              >&#xe5d2;</i
+            >
+          </button>
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="{% url 'home' %}">HOME</a></li>
+            <li class="nav__item">
+              <a href="{% url 'addbusiness' %}">ADD YOUR BUSINESS</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'contactus' %}">CONTACT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+          </ul>
+        </nav> 
+      </div>
+    </header>
+    <div>
+      <div class="container">
+      <main class="grid">
+        {% for shop in foot %}
+        <article>
+          <img  src='{{shop.imagelink}}' alt="Sample photo">
+            <div class="text">
+              <h4 class="font">{{shop.name}}</h4>
+              <h5>Open Time: <span>{{shop.timing_from}}am to {{shop.timing_to}}pm</span></h5>
+              <h5>Phone no: <span>{{shop.phone}}</span></h5>
+              <h5>Ratings: <span>{{shop.rating}}<span></h5>
+              <p><h5>Address: <span>{{shop.address}}</span></h5></p>
+            <a href="{{shop.url}}" class="btn-data">More Details</a>
+            </div>
+          </article>
+        {% endfor %}     
+      </main>
+    </div>
+    </div>
+  <script> 
+    let navToggle = document.querySelector(".nav__toggle");
+    let navWrapper = document.querySelector(".nav__wrapper");
+
+    navToggle.addEventListener("click", function () {
+      if (navWrapper.classList.contains("active")) {
+        this.setAttribute("aria-expanded", "false");
+        this.setAttribute("aria-label", "menu");
+        navWrapper.classList.remove("active");
+      } else {
+        navWrapper.classList.add("active");
+        this.setAttribute("aria-label", "close menu");
+        this.setAttribute("aria-expanded", "true");
+      }
+    });
+  </script>  
+</body>
+</html>
+
+
+
+

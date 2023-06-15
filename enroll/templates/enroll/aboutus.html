@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>About Developers</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'enroll/img/fevi.PNG' %}"
+      type="image/x-icon"
+      rel="shortcut icon"
+    />
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <link href="{% static 'enroll/css/about.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- main style-sheet  -->
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'enroll/css/screen.css' %}" />
+    {% endcomment %}
+    <link href="enroll/addbusiness.html" />
+    <link href="enroll/aboutus.html" />
+    <link href="enroll/contactus.html" />
+    <!--Script for icon -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home" id="page">
+    <!-- Header -->
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <!-- <a href="index.html" class="brand">MY BUSINESS</a> -->
+        <nav class="nav">
+          <button class="nav__toggle" aria-expanded="false" type="button">
+            <i class="material-icons" style="font-size: 40px; color: #e7434e"
+              >&#xe5d2;</i
+            >
+          </button>
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="{% url 'home' %}">HOME</a></li>
+            <li class="nav__item">
+              <a href="{% url 'addbusiness' %}">ADD YOUR BUSINESS</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'contactus' %}">CONTACT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-box">
+      <div class="container">
+        <div class="content">
+          <div class="image">
+            <img src="{% static 'enroll/img/download.png' %}" />
+          </div>
+          <br />
+          <div class="text-center"><h2>About Developers</h2></div>
+          <span><!-- line here --></span>
+          <p>Rohan Maindarkar</p>
+          <p>Darshan keskar</p>
+
+          <!-- <ul class = "links">
+                      <li><a href = "#">About </a></li>
+                      <div class = "vertical-line"></div>
+                      <li><a href = "#">service</a></li>
+                      <div class = "vertical-line"></div>
+                      <li><a href = "#">contact</a></li>
+                  </ul> -->
+          <ul class="icons">
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+              <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+              <i class="fa fa-github"></i>
+            </li>
+            <li>
+              <i class="fa fa-pinterest"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Mybusiness</h3>
+
+        <p class="footer-links">
+          <a href="{% url 'home' %}">Home</a>
+          ·
+          <a href="{% url 'aboutus' %}">About Creators</a>
+          ·
+          <a href="{% url 'contactus' %}">Contact Us</a>
+          ·
+          <a href="{% url 'addbusiness' %}">Add Your Business</a>
+          ·
+          <a href="{% url 'home' %}">Submit your Feedback</a>
+        </p>
+
+        <p class="footer-company-name">Mybusiness &copy; 2022</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Marwadi galli,mauli chowk</span> Osmanabad,MAHARASHTRA</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1 555 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">Mybusiness@hotmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the Mybusiness</span>
+          Mybusiness is the local Business website which helps to find any shop
+          and in anywhere &amp;By the profession.
+        </p>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/profile.php?id=100074886453578"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/rohan-maindarkar-b45000227/"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      //  script about the header
+      let navToggle = document.querySelector(".nav__toggle");
+      let navWrapper = document.querySelector(".nav__wrapper");
+
+      navToggle.addEventListener("click", function () {
+        if (navWrapper.classList.contains("active")) {
+          this.setAttribute("aria-expanded", "false");
+          this.setAttribute("aria-label", "menu");
+          navWrapper.classList.remove("active");
+        } else {
+          navWrapper.classList.add("active");
+          this.setAttribute("aria-label", "close menu");
+          this.setAttribute("aria-expanded", "true");
+        }
+      });
+    </script>
+  </body>
+</html>

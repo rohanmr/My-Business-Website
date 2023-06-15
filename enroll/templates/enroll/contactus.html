@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contact US</title>
+    <link href="{% static 'enroll/img/fevi.PNG' %}" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" href="{% static 'enroll/css/formstyle.css' %}" />
+     <link rel="stylesheet" href="{% static 'enroll/css/alert.css' %}" /> 
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--Script for icon -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <!-- <a href="index.html" class="brand">MY BUSINESS</a> -->
+        <nav class="nav">
+          <button class="nav__toggle" aria-expanded="false" type="button">
+            <i class="material-icons" style="font-size: 40px; color: #e7434e"
+              >&#xe5d2;</i
+            >
+          </button>
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="{% url 'home' %}">HOME</a></li>
+            <li class="nav__item">
+              <a href="{% url 'addbusiness' %}">ADD YOUR BUSINESS</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'contactus' %}">CONTACT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <span></span>
+    <form action="{% url 'contactus' %}" method="POST">
+      {% csrf_token %}
+      <div>
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <div class="alert-data">
+          <span class="closebtn-data" onclick="this.parentElement.style.display='none';">&times;</span>
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li></div>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="container">
+        <div class="contact-box">
+          <div class="left" style="background-image:url('{% static "enroll/img/rtt.jpg" %}');" ></div>
+          <div class="right">
+            <input type="text" class="field" name="fname"  placeholder="Your Firstname*" />
+            <input type="text" class="field" name="lname"  placeholder="Your Lastname*" />
+            <input type="text" class="field" name="phone"  placeholder="Your Contact no*" />
+            <input type="email" class="field" name="email" placeholder="Your Email*" />
+            <input type="text" class="field" name="topic" placeholder="Query(Topic)*" />
+            <input type="textarea" placeholder="message" name="messagefield" class="field" rows="4" cols="50"></input>
+          </form>
+            <button class="btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Mybusiness</h3>
+
+        <p class="footer-links">
+          <a href="{% static 'home' %}">Home</a>
+          ·
+          <a href="{% static 'aboutus' %}">About Creators</a>
+          ·
+          <a href="{% static 'contactus' %}">Contact Us</a>
+          ·
+          <a href="{% static 'addbusiness' %}">Add Your Business</a>
+          ·
+          <a href="{% static 'home' %}">Submit your Feedback</a>
+        </p>
+
+        <p class="footer-company-name">Mybusiness &copy; 2022</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Marwadi galli,mauli chowk</span> Osmanabad,MAHARASHTRA</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1 555 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">Mybusiness@hotmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the Mybusiness</span>
+          Mybusiness is the local Business website which helps to find any shop
+          and in anywhere &amp;By the profession.
+        </p>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/profile.php?id=100074886453578"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/rohan-maindarkar-b45000227/"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+      <script> 
+        let navToggle = document.querySelector(".nav__toggle");
+        let navWrapper = document.querySelector(".nav__wrapper");
+  
+        navToggle.addEventListener("click", function () {
+          if (navWrapper.classList.contains("active")) {
+            this.setAttribute("aria-expanded", "false");
+            this.setAttribute("aria-label", "menu");
+            navWrapper.classList.remove("active");
+          } else {
+            navWrapper.classList.add("active");
+            this.setAttribute("aria-label", "close menu");
+            this.setAttribute("aria-expanded", "true");
+          }
+        });
+      </script>
+  </body>
+</html>

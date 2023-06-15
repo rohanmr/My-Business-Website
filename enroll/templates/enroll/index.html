@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>My Business</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+   <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="{% static 'enroll/img/fevi.PNG' %}" type="image/x-icon" rel="shortcut icon" />
+     <meta name="keywords" content="footer, address, phone, icons" /> 
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"
+    /> 
+    <!-- main style-sheet  -->
+    <link href="{% static 'enroll/css/screen.css' %}" rel="stylesheet" />
+    <link rel="img" href="{% static 'enroll/img/'%}">
+    <link href="enroll/addbusiness.html" />
+    <link href="enroll/aboutus.html" />
+    <link href="enroll/contactus.html" />
+    <!--Script for icon -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home" id="page">
+    <!-- Header -->
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <!-- <a href="index.html" class="brand">MY BUSINESS</a> -->
+        <nav class="nav">
+          <button class="nav__toggle " aria-expanded="false" type="button">
+            <i class="material-icons" style="font-size: 40px; color: #e7434e"
+              >&#xe5d2;</i
+            >
+          </button>
+          <ul class="nav__wrapper ">
+            <li class="nav__item"><a href="{% url 'home' %}">HOME</a></li>
+            <li class="nav__item">
+              <a href="{% url 'addbusiness' %}">ADD YOUR BUSINESS</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'contactus' %}">CONTACT US</a>
+            </li>
+            <li class="nav__item">
+              <a href="{% url 'aboutus' %}">ABOUT US</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-box">
+      <!-- Hero Section -->
+      <section class="section section-hero">
+        <div class="hero-box" style="background-image:url('{% static "enroll/img/w3e.jpg" %}');">
+          <div class="container">
+            <div class="hero-text align-center">
+              <h1>SEARCH YOUR FAVOURITE BUSINESS NOW !</h1>
+              <div>
+                <img src="{% static 'enroll/img/subheading.png' %}" alt="loogo" />
+              </div>
+              <p>ARE YOU LOOKING FOR A SHOP ? SEARCH NOW!</p>
+            </div>
+
+            <form method="GET" action="{% url 'search' %}"class="destinations-form">
+              <div class="input-line">
+                <input
+                  id='search'
+                  type="text"
+                  name="query"
+                  value=""
+                  class="form-input check-value"
+                  placeholder="what are you looking for?"
+                />
+                <button
+                  id="search"
+                  type="submit"
+                  name="query"
+                  class="form-submit btn btn-special"
+                >
+                  SEARCH NOW!
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Statistics Box -->
+        <div class="container">
+          <div class="statistics-box">
+            <div class="statistics-item">
+              <span class="value">126</span>
+              <p class="title">Shops</p>
+            </div>
+
+            <div class="statistics-item">
+              <span class="value">12</span>
+              <p class="title">Categories</p>
+            </div>
+
+            <div class="statistics-item">
+              <span class="value">78</span>
+              <p class="title">Varities</p>
+            </div>
+
+            <div class="statistics-item">
+              <span class="value">125</span>
+              <p class="title">Local Business</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destinations Section -->
+      <section class="section section-destination">
+        <!-- Title -->
+        <div class="section-title">
+          <div class="container">
+            <h2 class="title">EXPLORE OUR TOP SHOPS</h2>
+            <p class="sub-title">Welcome To My Business.com</p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-16 col-xs-24">
+              <div class="destination-box">
+                <div class="box-cover">
+                  <a href="{% url 'grocerry' %}">
+                    <img src="{% static 'enroll/img/grocery.jpg' %}" alt="grocery image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="city">Grocery Shop</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 col-xs-24">
+              <div class="destination-box">
+                <div class="box-cover">
+                  <a href="{% url 'fashion' %}">
+                    <img src="{% static 'enroll/img/fashion.jpg' %}" alt="fashionshop image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="city">Fashion Shops</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 col-xs-24">
+              <div class="destination-box">
+                <div class="box-cover">
+                  <a href="{% url 'gift' %}">
+                    <img src="{% static 'enroll/img/gift.jpg' %}" alt="gift image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="city">Gift Shops</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 col-xs-24">
+              <div class="destination-box">
+                <div class="box-cover">
+                  <a href="{% url 'mobile' %}">
+                    <img src="{% static 'enroll/img/mobile.jpg' %}" alt="mobile image" />
+                  </a>
+                </div>
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="city">Cell Phone Shops</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 col-xs-24">
+              <div class="destination-box">
+                <div class="box-cover">
+                  <a href="{% url 'fastfood' %}">
+                    <img src="{% static 'enroll/img/fastfood.jpg' %}" alt="fastfood image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="city">Fast-Food Shops</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="load-destinations-box">
+              <div class="col-md-8 col-sm-12 col-xs-24">
+                <div class="destination-box">
+                  <div class="box-cover">
+                    <a href="{% url 'hardware' %}">
+                      <img src="{% static 'enroll/img/hard.jpg' %}" alt="Hardware image" />
+                    </a>
+                  </div>
+
+                  <div class="box-details">
+                    <div class="box-meta">
+                      <h4 class="city">Hardware Shop</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 col-sm-12 col-xs-24">
+                <div class="destination-box">
+                  <div class="box-cover">
+                    <a href="{% url 'footwear' %}">
+                      <img src="{% static 'enroll/img/footwere.jpg' %}" alt="footwere image" />
+                    </a>
+                  </div>
+
+                  <div class="box-details">
+                    <div class="box-meta">
+                      <h4 class="city">Foot Wear Shops</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 col-sm-12 col-xs-24">
+                <div class="destination-box">
+                  <div class="box-cover">
+                    <a href="{% url 'steel' %}">
+                      <img src="{% static 'enroll/img/stell.jpg' %}" alt="hardwere image" />
+                    </a>
+                  </div>
+
+                  <div class="box-details">
+                    <div class="box-meta">
+                      <h4 class="city">Steel Shop</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="align-center">
+            <a href="#" class="btn btn-default btn-load-destination"
+              ><span class="text">Explore More Local Shops</span
+              ><i class="icon-spinner6"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parallax Box -->
+      <div class="parallax-box" style="background-image:url('{% static "enroll/img/lane.jpg" %}');">
+        <div class="container">
+          <div class="text align-center">
+            <h1>Have your own Shop?</h1>
+            <p>Join with My Business,NOW!</p>
+
+            <a
+              href="{% url 'addbusiness' %}"
+              class="btn btn-special no-icon size-2x"
+              >Add Your Business Now!</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Boats Section -->
+      <section class="section section-boats">
+        <!-- Title -->
+        <div class="section-title" id="Toplist">
+          <div class="container">
+            <h2 class="title">Featured Shops</h2>
+            <p class="sub-title"></p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-xs-24">
+              <div class="boat-box">
+                <div class="box-cover">
+                  <a href="{% url 'jewellery' %}">
+                    <img src="{% static 'enroll/img/Jwellery.jpg' %}" alt="destination image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="boat-name">jewellery</h4>
+                    <ul class="clean-list boat-meta">
+                      <!-- <li class="location">Osmanabad</li>
+                                 <li class="berths">8 Berths</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-xs-24">
+              <div class="boat-box">
+                <div class="box-cover">
+                  <a href="{% url 'coffee' %}">
+                    <img src="{% static 'enroll/img/cofeeshop.jpg' %}" alt="destination image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="boat-name">Coffee Shop</h4>
+                    <ul class="clean-list boat-meta">
+                      <!-- <li class="location">Osmanabad</li>
+                                 <li class="berths">12 Berths</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-xs-24">
+              <div class="boat-box">
+                <div class="box-cover">
+                  <a href="{% url 'watch' %}">
+                    <img src="{% static 'enroll/img/watch.jpg' %}" alt="destination image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="boat-name">Watch Shop</h4>
+                    <ul class="clean-list boat-meta">
+                      <!-- <li class="location">Osmanabad</li>
+                                 <li class="berths">10 Berths</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-xs-24">
+              <div class="boat-box">
+                <div class="box-cover">
+                  <a href="{% url 'pharmacy' %}">
+                    <img src="{% static 'enroll/img/pharm.jpg' %}" alt="destination image" />
+                  </a>
+                </div>
+
+                <div class="box-details">
+                  <div class="box-meta">
+                    <h4 class="boat-name">Pharmacy Shop</h4>
+                    <ul class="clean-list boat-meta">
+                      <!-- <li class="location">Osmanabad</li>
+                                 <li class="berths">8 Berths</li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="load-boats-box">
+              <div class="col-sm-12 col-xs-24">
+                <div class="boat-box">
+                  <div class="box-cover">
+                    <a href="{% url 'computer' %}">
+                      <img src="{% static 'enroll/img/compu.jpg' %}" alt="destination image" />
+                    </a>
+                  </div>
+
+                  <div class="box-details">
+                    <div class="box-meta">
+                      <h4 class="boat-name">Computer Shop</h4>
+                      <ul class="clean-list boat-meta">
+                        <!-- <li class="location">Osmanabad</li>
+                                    <li class="berths">12 Berths</li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-xs-24">
+                <div class="boat-box">
+                  <div class="box-cover">
+                    <a href="{% url 'electronic' %}">
+                      <img src="{% static 'enroll/img/Elec.jpg' %}" alt="destination image" />
+                    </a>
+                  </div>
+
+                  <div class="box-details">
+                    <div class="box-meta">
+                      <h4 class="boat-name">Electronic Shop</h4>
+                      <ul class="clean-list boat-meta">
+                        <!-- <li class="location">Osmanabad</li>
+                                    <li class="berths">8 Berths</li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="align-center">
+            <a href="#" class="btn btn-default btn-load-boats"
+              ><span class="text">Search More Featured Shops</span
+              ><i class="icon-spinner6"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Mybusiness</h3>
+
+        <p class="footer-links">
+          <a href="{% url 'home' %}">Home</a>
+          ·
+          <a href="{% url 'aboutus' %}">About Creators</a>
+          ·
+          <a href="{% url 'contactus' %}">Contact Us</a>
+          ·
+          <a href="{% url 'addbusiness' %}">Add Your Business</a>
+          ·
+          <a href="{% url 'launch' %}">Submit your Feedback</a>
+        </p>
+
+        <p class="footer-company-name">Mybusiness &copy; 2022</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Marwadi galli,mauli chowk</span> Osmanabad,MAHARASHTRA</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1 555 123456</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">Mybusiness@hotmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the Mybusiness</span>
+          Mybusiness is the local Business website which helps to find any shop
+          and in anywhere &amp;By the profession.
+        </p>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/profile.php?id=100074886453578"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/rohan-maindarkar-b45000227/"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>  
+      let navToggle = document.querySelector(".nav__toggle");
+      let navWrapper = document.querySelector(".nav__wrapper");
+      let  navWrapper = document.querySelector("nav__item")
+      
+      navToggle.addEventListener("click", function () {
+        if (navWrapper.classList.contains("active")) {
+          this.setAttribute("aria-expanded", "false");
+          this.setAttribute("aria-label", "menu");
+          navWrapper.classList.remove("active");
+        } else {
+          navWrapper.classList.add("active");
+          this.setAttribute("aria-label", "close menu");
+          this.setAttribute("aria-expanded", "true");
+        }
+      });
+     </script>
+     <script src="{% static 'enroll/js/jquery.js' %}"></script> 
+    <script src="{% static 'enroll/js/functions.js' %}"></script>
+    <script> 
+    </script>
+   
+  </body>
+</html>
