@@ -15,25 +15,17 @@ Mybusiness is the business website which helps to find any category shop in the 
 
     https://www.python.org/downloads/ 
    
-4. Install Django by following commands.
+4. Install Django and Packages by following commands.
 
      pip install django
 
      pip install -r requirements.txt
 
-5. 
+5. Run the Project usign command.
+
+     python manage.py runserver
 
 
-
-
-
-   
-
-    
-
-   
-  
-     
 
 
 ## Output Image:
