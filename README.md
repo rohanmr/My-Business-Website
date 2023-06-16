@@ -11,8 +11,21 @@ Mybusiness is the business website which helps to find any category shop in the 
 ## How to Run:
 
 1. Download the Code and Open in VS Code.
-2. Install Django and Python by following commands.
-3. Write the following Commands.
+2. Install Python form Link
+
+    https://www.python.org/downloads/ 
+   
+4. Install Django by following commands.
+
+     pip install django
+
+
+
+
+   
+
+    
+5. Write the following Commands.
 
    
   
