@@ -19,13 +19,17 @@ Mybusiness is the business website which helps to find any category shop in the 
 
      pip install django
 
+     pip install -r requirements.txt
+
+5. 
+
+
 
 
 
    
 
     
-5. Write the following Commands.
 
    
   
