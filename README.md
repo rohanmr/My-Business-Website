@@ -8,7 +8,7 @@ https://mybusiness.pythonanywhere.com/
 
 Mybusiness is the business website which helps to find any category shop in the local city also shopper can add shop easily on our website.
 
-## How to Run:
+## How to Run Project:
 
 1. Download the Code and Open in VS Code.
 2. Install Python form Link.
