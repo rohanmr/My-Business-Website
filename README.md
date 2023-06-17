@@ -2,6 +2,8 @@
 
 ## Technologies Used:
 
+HTML,CSS,SASS,Python,Django
+
 ## Live Website Link:
 
 https://mybusiness.pythonanywhere.com/
