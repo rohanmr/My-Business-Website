@@ -11,7 +11,7 @@ Mybusiness is the business website which helps to find any category shop in the 
 ## How to Run:
 
 1. Download the Code and Open in VS Code.
-2. Install Python form Link
+2. Install Python form Link.
 
     https://www.python.org/downloads/ 
    
