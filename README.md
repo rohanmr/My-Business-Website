@@ -1,8 +1,10 @@
 # My-Business-Website
 
+Mybusiness is local busines Website.
+ 
 ## Technologies Used:
 
-HTML,CSS,SASS,Python,Django
+HTML, CSS, SASS, Python, Django
 
 ## Live Website Link:
 
