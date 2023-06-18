@@ -31,7 +31,7 @@ Mybusiness is the business website which helps to find any category shop in the 
 
      python manage.py runserver
 
-
+6. Copy the URL and Paste in Browser. 
 
 
 ## Output Image:
