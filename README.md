@@ -23,15 +23,15 @@ My business is a business website that helps to find any category shop in the lo
    
 4. Install Django and Packages by following commands.
 
-     pip install Djangoo
+     pip install django
 
      pip install -r requirements.txt
 
-5. Run the Project using command.
+5. Run the Project using the command.
 
      python manage.py runserver
 
-6. Copy the URL and Paste in the Browser. 
+6. Copy the URL and Paste it into the Browser. 
 
 
 ## Output Image:
