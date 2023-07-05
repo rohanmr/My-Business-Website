@@ -1,6 +1,6 @@
 # My-Business-Website
 
-Mybusiness is a local business Website.
+My business is a local business Website.
  
 ## Technologies Used:
 
@@ -12,7 +12,7 @@ https://mybusiness.pythonanywhere.com/
 
 ## Info:
 
-Mybusiness is a business website that helps to find any category shop in the local city also shoppers can add shops easily on our website.
+My business is a business website that helps to find any category shop in the local city also shoppers can add shops easily on our website.
 
 ## How to Run Project:
 
