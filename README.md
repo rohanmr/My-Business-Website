@@ -23,15 +23,15 @@ Mybusiness is a business website that helps to find any category shop in the loc
    
 4. Install Django and Packages by following commands.
 
-     pip install django
+     pip install Djangoo
 
      pip install -r requirements.txt
 
-5. Run the Project usign command.
+5. Run the Project using command.
 
      python manage.py runserver
 
-6. Copy the URL and Paste in Browser. 
+6. Copy the URL and Paste in the Browser. 
 
 
 ## Output Image:
