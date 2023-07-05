@@ -12,7 +12,7 @@ https://mybusiness.pythonanywhere.com/
 
 ## Info:
 
-My business is a business website that helps to find any category shop in the local city also shoppers can add shops easily on our website.
+My business website helps to find any category shop in the local city. Also, shoppers can add shops easily on our website.
 
 ## How to Run Project:
 
@@ -23,7 +23,7 @@ My business is a business website that helps to find any category shop in the lo
    
 4. Install Django and Packages by following commands.
 
-     pip install django
+     pip install Django
 
      pip install -r requirements.txt
 
