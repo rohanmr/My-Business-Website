@@ -6,7 +6,7 @@ My business is a local business Website.
 
 HTML, CSS, SASS, Python, Django.
 
-## Live Website Link:
+## Go to Live Site:
 
 https://mybusiness.pythonanywhere.com/
 
